@@ -1,0 +1,129 @@
+:root{
+  --clr-soft-blue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+  --clr-neutral-dark-blue-200: hsl(217, 54%, 11%); 
+  --clr-neutral-dark-blue-500: hsl(216, 50%, 16%);
+  --clr-neutral-dark-blue-900: hsl(215, 32%, 27%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  --ff-base: 'Outfit', sans-serif;
+  --fw-light:300;
+  --fw-regular:400;
+  --fw-bold:600;
+}
+*,*::before,*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+h1,h2,h3{
+  line-height: 1;
+}
+img,svg{
+  display: block;
+  max-width: 100%;
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-neutral-dark-blue-200);
+}
+.card{
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--clr-neutral-dark-blue-500);
+  padding: 1.5rem;
+  margin: 2rem;
+  border-radius: 10px;
+  font-family: var(--ff-base);
+  color: var(--clr-soft-blue);
+  font-weight: var(--fw-light);
+}
+.card_img{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.card_img-active{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: hsla(178, 100%, 50%, 50%);
+  opacity: 0%;
+  justify-content: center;
+  align-items: center;
+}
+.card_img-active:is(:hover,:focus){
+  cursor: pointer;
+  transition: all ease-in 300ms;
+  opacity: 100%;
+}
+.card_title{
+  color: var(--clr-neutral-white);
+  font-size: 1.5rem;
+}
+.card_title:is(:hover,:focus){
+  cursor: pointer;
+  color: var(--clr-cyan);
+}
+.card_info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card_info-price{
+  font-size: 0.65rem;
+  color: var(--clr-cyan);
+}
+.card_info-time img{
+  height: 100%;
+}
+.info-item{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+.card_info-author::before{
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: var(--clr-neutral-dark-blue-900);
+  left: 0;
+  bottom: 150%;
+  position: absolute;
+}
+.card_info-author{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  margin: 1rem 0 0;
+}
+.card_info-author img{
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--clr-neutral-white);
+}
+.card_info-author a{
+  color: var(--clr-neutral-white);
+  text-decoration: none;
+}
+.card_info-author a:is(:hover,:focus){
+  cursor: pointer;
+  color: var(--clr-cyan);
+}
