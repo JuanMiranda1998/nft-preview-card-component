@@ -29,6 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/JuanMiranda1998/nft-preview-card-component]
+- Live Site URL: [https://juanmiranda1998-nft-card-component.netlify.app/]
 
 ### Built with
 
